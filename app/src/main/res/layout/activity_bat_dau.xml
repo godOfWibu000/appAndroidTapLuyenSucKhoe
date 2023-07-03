@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BatDauActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/batDauBaiTapLayout"
+        android:layout_width="480dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/boQuaBaiTapBtn"
+            android:layout_width="240dp"
+            android:layout_height="70dp"
+            android:backgroundTint="#E74C3C"
+            android:textSize="20dp"
+            android:text="Bỏ qua"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/batDauTapBtn"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+        <HorizontalScrollView
+            android:layout_width="480dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boQuaBaiTapBtn">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/batDauBuocTapLv"
+                    android:layout_width="480dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="480dp"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/anhBatDauBaiTapIv"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/chaybuocnhotaicho" />
+
+            <TextView
+                android:id="@+id/tenBatDauBaiTapTv"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Tên bài tập"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/batDauTapBtn"
+            android:layout_width="240dp"
+            android:layout_height="70dp"
+            android:backgroundTint="#03A9F4"
+            android:textSize="20dp"
+            android:text="Bắt đầu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/huongDanLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#03A9F4"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="48dp">
+
+        <Button
+            android:id="@+id/huongDanSauBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Sau"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noiDungHuongDanTv" />
+
+        <Button
+            android:id="@+id/huongDanTruocBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Trước"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noiDungHuongDanTv" />
+
+        <ImageView
+            android:id="@+id/anhHuongDanIv"
+            android:layout_width="480dp"
+            android:layout_height="480dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/khoidong" />
+
+        <Button
+            android:id="@+id/boQuaHuongDanBtn"
+            android:layout_width="480dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Bỏ quá"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/huongDanSauBtn" />
+
+        <TextView
+            android:id="@+id/noiDungHuongDanTv"
+            android:layout_width="480dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:text="Khởi động trước khi tập luyện giúp tăng hiệu quả tập luyện và giảm chấn thương không mong muốn"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anhHuongDanIv" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/boQuaHuongDanBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/huongDanSauBtn"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/circleHD1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/circle1" />
+
+            <ImageView
+                android:id="@+id/circleHD2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/circle2" />
+
+            <ImageView
+                android:id="@+id/circleHD3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/circle2" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
